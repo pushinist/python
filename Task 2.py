@@ -1,8 +1,8 @@
 from collections import Counter
-string = 'aabbbbaasdqweqwekajfkmbsdjfnsajkdfhajdskvnlsd vauh dsahfajksdnfksadjf'.replace(" ", "")
+string = input().replace(" ", "")
 
 cnt = Counter(string)
-dict(cnt)
-print(cnt)
-maximum = max(cnt, key=cnt.get)
-print(maximum, cnt[maximum])
+
+result = cnt.most_common(3)
+for i in result:
+    print(i[0], i[1])
