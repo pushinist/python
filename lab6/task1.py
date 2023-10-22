@@ -5,10 +5,10 @@ def mult(arr):
     return res
 
 
-fin = open("input1.txt", "r")
+fin = open("./lab6/input1.txt", "r")
 arr = list(map(int, fin.readline().split()))
 fin.close()
 
-fout = open("output1.txt", "w")
+fout = open("./lab6/output1.txt", "w")
 fout.write(str(mult(arr)))
 fout.close()
