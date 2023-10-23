@@ -67,7 +67,7 @@ class Student:
     def __init__(self, name, univ = 'Default Univ', state = False):
         self.name = name # динамическое поле (изменяемое)
         self.univ = univ # динамическое поле (изменяемое)
-        self.state = state
+        self.state = state # динамическое поле (изменяемое)
     
     
     def append(self):
