@@ -20,9 +20,16 @@ with open(r'polkosky_projects\text.txt', 'r', encoding='utf-8') as file:
     result = sorted(data, key=lambda tuple: tuple[0])
 
 with open(r'polkosky_projects\output_text.txt', 'w', encoding='utf-8') as file:
-    for line in file:
+    for line in result:
+        for item in line:
+            file.write(item)
+        file.write('\n')
         
         
     
-with open(r'polkosky_projects\output_bin.bin', 'wb', encoding='utf-8') as file:
-    file.write(result)
+with open(r'polkosky_projects\output_bin.bin', 'wb') as file:
+    for line in result:
+        for item in line:
+            print(type(bytes(item, encoding='utf-8')))
+            #file.write(item)
+        #file.write(b'\n')
