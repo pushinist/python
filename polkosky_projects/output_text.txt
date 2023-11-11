@@ -1,8 +1,0 @@
-Beer100False
-Cola50True
-Crisps30False
-Milk70True
-Pepsi90False
-Sigarrets150False
-Soda80True
-Water30True

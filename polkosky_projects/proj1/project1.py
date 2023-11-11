@@ -13,23 +13,38 @@
 '''
 
 
-with open(r'polkosky_projects\text.txt', 'r', encoding='utf-8') as file:
+with open(r'text.txt', 'r', encoding='utf-8') as file:
     data = []
     for line in file:
         data.append(tuple(line.split()))
     result = sorted(data, key=lambda tuple: tuple[0])
 
-with open(r'polkosky_projects\output_text.txt', 'w', encoding='utf-8') as file:
+with open(r'output_text.txt', 'w', encoding='utf-8') as file:
     for line in result:
         for item in line:
             file.write(item)
+            file.write('\t')
         file.write('\n')
-        
-        
-    
-with open(r'polkosky_projects\output_bin.bin', 'wb') as file:
+
+
+
+with open(r'output_bin.bin', 'wb') as file:
     for line in result:
         for item in line:
-            print(type(bytes(item, encoding='utf-8')))
-            #file.write(item)
-        #file.write(b'\n')
+            #print(type(bytes(item, encoding='utf-8')))
+            file.write(bytes(item, encoding='utf-8'))
+            file.write(b'\t')
+        file.write(b'\n')
+
+with open(r'output_bin.bin', 'rb') as file:
+    data = []
+    for line in file:
+        data.append(tuple(line.split()))
+    result = sorted(data, key=lambda tuple: tuple[2])
+
+with open(r'output_bin.txt', 'w', encoding='utf-8') as file:
+    for line in result:
+        for item in line:
+            file.write(str(item))
+            file.write('\t')
+        file.write('\n')
