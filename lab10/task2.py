@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def lissajous_curve(t, A, B, a, b, delta):
+def lisaju_curve(t, A, B, a, b, delta):
     x = A * np.sin(a * t + delta)
     y = B * np.sin(b * t)
     return x, y
@@ -20,7 +20,7 @@ fig.suptitle('Фигуры Лисажу')
 
 for i, (a, b) in enumerate(frequencies):
     t = np.linspace(0, 2 * np.pi, 1000)
-    x, y = lissajous_curve(t, A, B, a, b, delta)
+    x, y = lisaju_curve(t, A, B, a, b, delta)
 
     row = i // 2
     col = i % 2
