@@ -8,7 +8,7 @@ for n in range(1, 8):
     y = special.legendre(n)(x)
     plt.plot(x, y, label=f'P_{n}(x)')
 
-plt.title('Legendre Polynomials')
+plt.title('Полиномы Лежандра')
 plt.xlabel('x')
 plt.ylabel('P_n(x)')
 plt.legend()
