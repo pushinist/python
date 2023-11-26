@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def calculate_mse(x, y):
-    return np.mean((x - y)**2)
+    return np.square(x - y).mean()
 
 x = np.linspace(0, 1, 100)
 y = np.linspace(0, 1, 100)
