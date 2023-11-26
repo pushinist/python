@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation
 
-def lissajous_curve(t, A, B, a, b, delta):
+def lisaju_curve(t, A, B, a, b, delta):
     x = A * np.sin(a * t + delta)
     y = B * np.sin(b * t)
     return x, y
@@ -16,7 +16,7 @@ def update(frame):
     b = ratio
 
     t = np.linspace(0, 2 * np.pi, 1000)
-    x, y = lissajous_curve(t, A, B, a, b, delta)
+    x, y = lisaju_curve(t, A, B, a, b, delta)
 
     ax.plot(x, y, label=f'a/b = {a}/{b}')
     ax.set_title(f'a/b = {a}/{b}')
