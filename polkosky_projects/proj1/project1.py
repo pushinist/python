@@ -45,6 +45,6 @@ with open(r'output_bin.bin', 'rb') as file:
 with open(r'output_bin.txt', 'w', encoding='utf-8') as file:
     for line in result:
         for item in line:
-            file.write(str(item))
+            file.write(str(item.decode('utf-8')))
             file.write('\t')
         file.write('\n')
